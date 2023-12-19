@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.set("view engine", "ejs");
-app.set("port", 3000);
+app.set("port", process.env.PORT);
 app.use(cookieParser());
 
 function asyncHandler(fn: (req: any, res: any, next: NextFunction) => Promise<any>): any {
